@@ -1,0 +1,29 @@
+
+<!-- Interpolation -->
+<p>
+    {{message}}
+</p>
+
+<!-- <input value = "{{message}}" /> -->
+
+<!-- Property binding -->
+<input [value] = "message" [disabled] = "isActive" />
+
+<!-- Event binding -->
+<input [value] = "message" #messageRef />
+<button (click) = "handleChangeMessage(messageRef)" >Click</button>
+
+<p>{{userName}}</p>
+
+<input [value] = userName (change) = "handleChangeUserName($event)" />
+<input [value] = userName (input) = "handleChangeUserName($event)" />
+
+
+<!-- Two-way binding --> 
+<!-- Thay đổi giá trị biến email trong Ts và binding lại chỉ áp dụng cho event input -->
+
+<p>{{email}}</p>
+<input [(ngModel)] = 'email' /> 
+
+<!-- <input [value] = "email" (input) = "email = $event.target.value" /> -->
+

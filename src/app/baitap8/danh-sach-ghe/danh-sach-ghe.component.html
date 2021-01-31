@@ -1,0 +1,9 @@
+<div class="row" >
+    <div *ngFor="let ghe of danhSachGhe" class="col-sm-3" >
+        <app-ghe [ghe] = "ghe" (onSelect)="chonGhe($event)" #ghe ></app-ghe>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,15 @@
+<div *ngIf="control?.invalid && (control?.dirty || control?.touched)" class="alert alert-danger" >
+    <ng-container *ngFor="let item of control?.errors | keyvalue" >
+        <!-- keyvalue là 1 object là key và value -->
+        <!-- item lá 1object: {key: value} -->
+        <!-- key: required/minlength/maxlength/pattern 
+        -->
+        <!-- value: true/false -->
+        <span *ngIf="item.value">
+            <!-- Hiện thị massage error massage -->
+            <!-- {{message[name][item.key] || message[item.key] }} -->
+            {{message[name] ? message[name][item.key] : message[item.key] }}
+
+        </span>
+    </ng-container>
+</div>

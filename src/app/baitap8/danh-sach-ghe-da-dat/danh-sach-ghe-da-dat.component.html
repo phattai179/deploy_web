@@ -1,0 +1,9 @@
+<h3>
+    Danh Sách Ghế Đã Đặt
+    ({{danhSachGheDaDat.length}})
+</h3>
+
+<p *ngFor = "let ghe of danhSachGheDaDat">
+    Ghế: {{ghe.SoGhe}} - ${{ghe.Gia}}
+    <a class="text-danger" (click) = "huyGhe(ghe.SoGhe)" >[Hủy]</a>
+</p>

@@ -1,0 +1,14 @@
+<h1 class="text-center text-warning" >
+    Bài tập đặt vé xe bus
+</h1>
+
+<div class="container" >
+    <div class="row" >
+        <div class="col-sm-6">
+            <app-danh-sach-ghe #dsGhe (onSelect)="chonGhe($event)" ></app-danh-sach-ghe>
+        </div>
+        <div class="col-sm-6" >
+            <app-danh-sach-ghe-da-dat #dsGheDaDat (onRemove) = "huyGhe($event)" ></app-danh-sach-ghe-da-dat>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<button 
+class="ghe btn btn-secondary"
+[ngClass]= 
+    "{
+    'btn-danger': ghe.DaDat,
+    'btn-success': dangChon
+    }"
+[disabled]="ghe.DaDat"
+(click)="chonGhe()"
+>
+    {{ghe.SoGhe}}
+</button>
+
+

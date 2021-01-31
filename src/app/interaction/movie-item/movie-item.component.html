@@ -1,0 +1,12 @@
+<div class="card">
+    <img class="card-img-top" [src] = "movie.image" alt="">
+    <div class="card-body">
+        <h4 class="card-title">{{movie.name}}</h4>
+        <p class="card-text">{{movie.price}}</p>
+        <button (click) = "handleDeleteMovie()" class="btn btn-danger" >
+            Delete
+        </button>
+    </div>
+</div>
+
+

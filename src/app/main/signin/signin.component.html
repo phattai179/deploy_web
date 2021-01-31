@@ -1,0 +1,46 @@
+<h1 class="text-center">
+    Signin
+</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 mx-auto">
+            <form [formGroup]="signinForm" (ngSubmit)="handleSignin()">
+                <!-- Tài khoản -->
+                <div class="form-group">
+                    <label for="">Tài Khoản</label>
+                    <input type="text" class="form-control" formControlName="taiKhoan">
+                    <!-- Thay thế component error-massage -->
+
+                    <app-error-massage [control]="signinForm.get('taiKhoan')" name="taiKhoan"></app-error-massage>
+
+
+                    <!-- <div *ngIf="signinForm.get('taiKhoan')?.invalid && (signinForm.get('taiKhoan')?.touched || signinForm.get('taiKhoan')?.dirty)" class="alert alert-danger" >
+                    <span *ngIf="signinForm.get('taiKhoan')?.errors?.required">
+                        Tài khoản không được bỏ trống
+                    </span>
+                    <span *ngIf="signinForm.get('taiKhoan')?.errors?.minlength || signinForm.get('taiKhoan')?.errors?.maxlength " >
+                        Tài khoản phải từ 3 đến 20 ký tự
+                    </span>
+                  </div> -->
+                </div>
+                <!-- Mật khẩu -->
+
+
+                <div class="form-group">
+                    <label>Mật Khẩu</label>
+                    <input type="text" class="form-control" formControlName="matKhau">
+
+                    <app-error-massage [control]="signinForm.get('matKhau')"></app-error-massage>
+
+                    <!-- <div *ngIf="signinForm.get('matKhau')?.invalid && (signinForm.get('matKhau')?.touched || signinForm.get('matKhau')?.dirty)" class="alert alert-danger" >
+                        <span *ngIf="signinForm.get('matKhau')?.errors?.required">
+                            Mật khẩu không được bỏ trống
+                        </span>
+                    </div> -->
+                </div>
+                <!-- Submit -->
+                <button class="btn btn-success">Đăng Nhập</button>
+            </form>
+        </div>
+    </div>
+</div>
